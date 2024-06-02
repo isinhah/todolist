@@ -1,13 +1,13 @@
 package com.api.todolist.controller;
 
 import com.api.todolist.domain.Task;
+import com.api.todolist.dto.TaskPostRequestBody;
 import com.api.todolist.service.TaskService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,5 +21,10 @@ public class TaskController {
     @GetMapping
     public ResponseEntity<List<Task>> getAll() {
         return new ResponseEntity<>(taskService.getAll(), HttpStatus.OK);
+    }
+
+    @PostMapping
+    public ResponseEntity<Task> create(@RequestBody @Valid TaskPostRequestBody dto) {
+        return new ResponseEntity<>(taskService.createTask(dto), HttpStatus.CREATED);
     }
 }

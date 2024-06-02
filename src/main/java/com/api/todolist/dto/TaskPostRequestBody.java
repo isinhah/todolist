@@ -1,39 +1,31 @@
-package com.api.todolist.domain;
+package com.api.todolist.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import jakarta.persistence.*;
+import jakarta.validation.constraints.Future;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
-import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.Objects;
 
-@Entity
-@Table(name = "tb_task")
-public class Task implements Serializable {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class TaskPostRequestBody {
+
+    @NotBlank(message = "The title cannot be empty")
     private String title;
     private String description;
     private String category;
+
+    @NotNull(message = "The deadline cannot be null")
+    @Future(message = "The deadline must be in the future")
+    @JsonFormat(pattern = "dd-MM-yyyy")
     private LocalDate deadline;
 
-    public Task() {
-    }
+    public TaskPostRequestBody() {}
 
-    public Task(Long id, String title, String description, String category, LocalDate deadline) {
-        this.id = id;
+    public TaskPostRequestBody(String title, String description, String category, LocalDate deadline) {
         this.title = title;
         this.description = description;
         this.category = category;
         this.deadline = deadline;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getTitle() {
@@ -66,18 +58,5 @@ public class Task implements Serializable {
 
     public void setDeadline(LocalDate deadline) {
         this.deadline = deadline;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        if (this == object) return true;
-        if (object == null || getClass() != object.getClass()) return false;
-        Task that = (Task) object;
-        return Objects.equals(id, that.id);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
     }
 }
