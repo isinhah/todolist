@@ -33,6 +33,11 @@ public class TaskController {
         return new ResponseEntity<>(taskService.getByTitle(title), HttpStatus.OK);
     }
 
+    @GetMapping("/find/by-category")
+    public ResponseEntity<List<Task>> getByCategory(@RequestParam String category) {
+        return new ResponseEntity<>(taskService.getByCategory(category), HttpStatus.OK);
+    }
+
     @PostMapping
     public ResponseEntity<Task> create(@RequestBody @Valid TaskPostRequestBody dto) {
         return new ResponseEntity<>(taskService.createTask(dto), HttpStatus.CREATED);

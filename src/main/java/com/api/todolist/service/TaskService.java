@@ -29,6 +29,10 @@ public class TaskService {
         return taskRepository.findByTitleContainingIgnoreCase(title);
     }
 
+    public List<Task> getByCategory(String category) {
+        return taskRepository.findByCategoryContainingIgnoreCase(category);
+    }
+
     @Transactional
     public Task createTask(TaskPostRequestBody dto) {
         return taskRepository.save(TaskMapper.toEntityTask(dto));
