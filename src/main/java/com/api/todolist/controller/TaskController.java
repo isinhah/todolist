@@ -5,10 +5,12 @@ import com.api.todolist.dto.TaskPostRequestBody;
 import com.api.todolist.service.TaskService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -36,6 +38,11 @@ public class TaskController {
     @GetMapping("/find/by-category")
     public ResponseEntity<List<Task>> getByCategory(@RequestParam String category) {
         return new ResponseEntity<>(taskService.getByCategory(category), HttpStatus.OK);
+    }
+
+    @GetMapping("/find/by-deadline")
+    public ResponseEntity<List<Task>> getByDeadline(@RequestParam("deadline") @DateTimeFormat(pattern = "dd-MM-yyyy") LocalDate deadline) {
+        return new ResponseEntity<>(taskService.getByDeadline(deadline), HttpStatus.OK);
     }
 
     @PostMapping
