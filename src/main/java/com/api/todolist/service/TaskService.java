@@ -25,6 +25,10 @@ public class TaskService {
         return taskRepository.findById(id).orElseThrow(() -> new NotFoundException("Task not found with this id."));
     }
 
+    public List<Task> getByTitle(String title) {
+        return taskRepository.findByTitleContainingIgnoreCase(title);
+    }
+
     @Transactional
     public Task createTask(TaskPostRequestBody dto) {
         return taskRepository.save(TaskMapper.toEntityTask(dto));

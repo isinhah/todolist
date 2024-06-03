@@ -28,6 +28,11 @@ public class TaskController {
         return new ResponseEntity<>(taskService.getByIdOrThrowNotFoundException(id), HttpStatus.OK);
     }
 
+    @GetMapping("/find/by-title")
+    public ResponseEntity<List<Task>> getByTitle(@RequestParam String title) {
+        return new ResponseEntity<>(taskService.getByTitle(title), HttpStatus.OK);
+    }
+
     @PostMapping
     public ResponseEntity<Task> create(@RequestBody @Valid TaskPostRequestBody dto) {
         return new ResponseEntity<>(taskService.createTask(dto), HttpStatus.CREATED);
