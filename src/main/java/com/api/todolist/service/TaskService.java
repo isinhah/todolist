@@ -8,6 +8,8 @@ import com.api.todolist.mapper.TaskMapper;
 import com.api.todolist.repository.TaskRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -21,6 +23,10 @@ public class TaskService {
 
     public List<Task> getAll() {
         return taskRepository.findAll();
+    }
+
+    public Page<Task> listAll(Pageable pageable) {
+        return taskRepository.findAll(pageable);
     }
 
     public Task getByIdOrThrowNotFoundException(Long id) {

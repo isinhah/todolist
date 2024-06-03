@@ -6,6 +6,8 @@ import com.api.todolist.dto.TaskPutRequestBody;
 import com.api.todolist.service.TaskService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,6 +26,11 @@ public class TaskController {
     @GetMapping
     public ResponseEntity<List<Task>> getAll() {
         return new ResponseEntity<>(taskService.getAll(), HttpStatus.OK);
+    }
+
+    @GetMapping("/list")
+    public ResponseEntity<List<Task>> listAll(Pageable pageable) {
+        return new ResponseEntity<>(taskService.listAll(pageable).getContent(), HttpStatus.OK);
     }
 
     @GetMapping("/{id}")

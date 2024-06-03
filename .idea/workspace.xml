@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a07b1fc9-e2c7-4a4e-9f33-ba24fd3408b5" name="Changes" comment="updateTask">
+    <list default="true" id="a07b1fc9-e2c7-4a4e-9f33-ba24fd3408b5" name="Changes" comment="deleteTask">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/api/todolist/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/api/todolist/controller/TaskController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/api/todolist/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/api/todolist/service/TaskService.java" afterDir="false" />
     </list>
@@ -165,7 +165,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717425497137</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="deleteTask">
+      <option name="closed" value="true" />
+      <created>1717425841739</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1717425841739</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -178,6 +186,7 @@
     <MESSAGE value="getByCategory" />
     <MESSAGE value="getByDeadline" />
     <MESSAGE value="updateTask" />
-    <option name="LAST_COMMIT_MESSAGE" value="updateTask" />
+    <MESSAGE value="deleteTask" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleteTask" />
   </component>
 </project>
