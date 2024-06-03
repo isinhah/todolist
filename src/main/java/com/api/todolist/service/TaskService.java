@@ -51,4 +51,9 @@ public class TaskService {
         task.setId(savedTask.getId());
         taskRepository.save(task);
     }
+
+    @Transactional
+    public void deleteTask(Long id) {
+        taskRepository.delete(getByIdOrThrowNotFoundException(id));
+    }
 }
