@@ -2,6 +2,7 @@ package com.api.todolist.service;
 
 import com.api.todolist.domain.Task;
 import com.api.todolist.dto.TaskPostRequestBody;
+import com.api.todolist.dto.TaskPutRequestBody;
 import com.api.todolist.exceptions.NotFoundException;
 import com.api.todolist.mapper.TaskMapper;
 import com.api.todolist.repository.TaskRepository;
@@ -41,5 +42,13 @@ public class TaskService {
     @Transactional
     public Task createTask(TaskPostRequestBody dto) {
         return taskRepository.save(TaskMapper.toEntityTask(dto));
+    }
+
+    @Transactional
+    public void updateTask(TaskPutRequestBody dto) {
+        Task savedTask = getByIdOrThrowNotFoundException(dto.getId());
+        Task task = TaskMapper.toEntityTask(dto);
+        task.setId(savedTask.getId());
+        taskRepository.save(task);
     }
 }

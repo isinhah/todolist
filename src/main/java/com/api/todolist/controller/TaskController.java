@@ -2,6 +2,7 @@ package com.api.todolist.controller;
 
 import com.api.todolist.domain.Task;
 import com.api.todolist.dto.TaskPostRequestBody;
+import com.api.todolist.dto.TaskPutRequestBody;
 import com.api.todolist.service.TaskService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,5 +49,11 @@ public class TaskController {
     @PostMapping
     public ResponseEntity<Task> create(@RequestBody @Valid TaskPostRequestBody dto) {
         return new ResponseEntity<>(taskService.createTask(dto), HttpStatus.CREATED);
+    }
+
+    @PutMapping
+    public ResponseEntity<Void> update(@RequestBody @Valid TaskPutRequestBody dto) {
+        taskService.updateTask(dto);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }
