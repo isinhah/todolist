@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a07b1fc9-e2c7-4a4e-9f33-ba24fd3408b5" name="Changes" comment="deleteTask">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/api/todolist/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/api/todolist/controller/TaskController.java" afterDir="false" />
+    <list default="true" id="a07b1fc9-e2c7-4a4e-9f33-ba24fd3408b5" name="Changes" comment="exceptions: getByTitle, getByCategory e getByDeadline">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/api/todolist/handler/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/api/todolist/handler/exceptions/BadRequestException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/api/todolist/handler/exceptions/BadRequestExceptionDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/api/todolist/handler/exceptions/ExceptionDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/api/todolist/handler/exceptions/ResourceNotFoundExceptionDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/api/todolist/handler/exceptions/ValidationExceptionDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/api/todolist/exceptions/NotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/api/todolist/handler/exceptions/ResourceNotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/api/todolist/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/api/todolist/service/TaskService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -173,7 +180,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717425841739</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="listAll paginated">
+      <option name="closed" value="true" />
+      <created>1717426317233</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1717426317233</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -187,6 +202,7 @@
     <MESSAGE value="getByDeadline" />
     <MESSAGE value="updateTask" />
     <MESSAGE value="deleteTask" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleteTask" />
+    <MESSAGE value="listAll paginated" />
+    <option name="LAST_COMMIT_MESSAGE" value="listAll paginated" />
   </component>
 </project>

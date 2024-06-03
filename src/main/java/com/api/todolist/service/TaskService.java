@@ -3,7 +3,7 @@ package com.api.todolist.service;
 import com.api.todolist.domain.Task;
 import com.api.todolist.dto.TaskPostRequestBody;
 import com.api.todolist.dto.TaskPutRequestBody;
-import com.api.todolist.exceptions.NotFoundException;
+import com.api.todolist.handler.exceptions.ResourceNotFoundException;
 import com.api.todolist.mapper.TaskMapper;
 import com.api.todolist.repository.TaskRepository;
 import jakarta.transaction.Transactional;
@@ -30,18 +30,27 @@ public class TaskService {
     }
 
     public Task getByIdOrThrowNotFoundException(Long id) {
-        return taskRepository.findById(id).orElseThrow(() -> new NotFoundException("Task not found with this id."));
+        return taskRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Task not found with this id."));
     }
 
     public List<Task> getByTitle(String title) {
+        if (title == null || title.trim().isEmpty()) {
+            throw new IllegalArgumentException("Title cannot be null or empty");
+        }
         return taskRepository.findByTitleContainingIgnoreCase(title);
     }
 
     public List<Task> getByCategory(String category) {
+        if (category == null || category.trim().isEmpty()) {
+            throw new IllegalArgumentException("Category cannot be null or empty");
+        }
         return taskRepository.findByCategoryContainingIgnoreCase(category);
     }
 
     public List<Task> getByDeadline(LocalDate deadline) {
+        if (deadline == null) {
+            throw new IllegalArgumentException("Deadline cannot be null");
+        }
         return taskRepository.findByDeadline(deadline);
     }
 
