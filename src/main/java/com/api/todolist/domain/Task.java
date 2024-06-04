@@ -20,6 +20,13 @@ public class Task implements Serializable {
     public Task() {
     }
 
+    public Task(String title, String description, String category, LocalDate deadline) {
+        this.title = title;
+        this.description = description;
+        this.category = category;
+        this.deadline = deadline;
+    }
+
     public Task(Long id, String title, String description, String category, LocalDate deadline) {
         this.id = id;
         this.title = title;
