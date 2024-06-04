@@ -37,21 +37,33 @@ public class TaskService {
         if (title == null || title.trim().isEmpty()) {
             throw new IllegalArgumentException("Title cannot be null or empty");
         }
-        return taskRepository.findByTitleContainingIgnoreCase(title);
+        List<Task> tasks = taskRepository.findByTitleContainingIgnoreCase(title);
+        if (tasks.isEmpty()) {
+            throw new ResourceNotFoundException("Task with title: " + title + " not found");
+        }
+        return tasks;
     }
 
     public List<Task> getByCategory(String category) {
         if (category == null || category.trim().isEmpty()) {
             throw new IllegalArgumentException("Category cannot be null or empty");
         }
-        return taskRepository.findByCategoryContainingIgnoreCase(category);
+        List<Task> tasks = taskRepository.findByCategoryContainingIgnoreCase(category);
+        if (tasks.isEmpty()) {
+            throw new ResourceNotFoundException("Task with category: " + category + " not found");
+        }
+        return tasks;
     }
 
     public List<Task> getByDeadline(LocalDate deadline) {
         if (deadline == null) {
             throw new IllegalArgumentException("Deadline cannot be null");
         }
-        return taskRepository.findByDeadline(deadline);
+        List<Task> tasks = taskRepository.findByDeadline(deadline);
+        if (tasks.isEmpty()) {
+            throw new ResourceNotFoundException("Task with deadline: " + deadline + " not found");
+        }
+        return tasks;
     }
 
     @Transactional
