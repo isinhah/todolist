@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a07b1fc9-e2c7-4a4e-9f33-ba24fd3408b5" name="Changes" comment="testes unitários:">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/api/todolist/controller/TaskControllerTest.java" afterDir="false" />
+    <list default="true" id="a07b1fc9-e2c7-4a4e-9f33-ba24fd3408b5" name="Changes" comment="testes unitários: taskController">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/api/todolist/service/TaskServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/api/todolist/service/TaskServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1__create_table_tb_task.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1__create_table_tb_task.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V1__create_table_tb_task.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/migration/V1__create_table_tb_task.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,21 +66,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.TodolistApplication.executor": "Run",
-    "JUnit.TaskControllerTest.executor": "Run",
-    "JUnit.TaskServiceTest.executor": "Run",
-    "JUnit.TaskServiceTest.getByTitle_ReturnsTask_WhenSuccessful.executor": "Debug",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.TodolistApplication.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TaskControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TaskServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TaskServiceTest.getByTitle_ReturnsTask_WhenSuccessful.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -220,7 +223,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717512033825</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="testes unitários: taskController">
+      <option name="closed" value="true" />
+      <created>1717598636645</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1717598636645</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -249,6 +260,7 @@
     <MESSAGE value="global handler e exceptions: getById, getByTitle, getByCategory e getByDeadline" />
     <MESSAGE value="exceptions em TaskService" />
     <MESSAGE value="testes unitários: taskService" />
-    <option name="LAST_COMMIT_MESSAGE" value="testes unitários: taskService" />
+    <MESSAGE value="testes unitários: taskController" />
+    <option name="LAST_COMMIT_MESSAGE" value="testes unitários: taskController" />
   </component>
 </project>
