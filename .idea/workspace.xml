@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a07b1fc9-e2c7-4a4e-9f33-ba24fd3408b5" name="Changes" comment="testes unitários: taskController">
+    <list default="true" id="a07b1fc9-e2c7-4a4e-9f33-ba24fd3408b5" name="Changes" comment="implementacao do postgres">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1__create_table_tb_task.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1__create_table_tb_task.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V1__create_table_tb_task.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/migration/V1__create_table_tb_task.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +226,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717598636645</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="implementacao do postgres">
+      <option name="closed" value="true" />
+      <created>1717612032395</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1717612032395</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -261,6 +264,7 @@
     <MESSAGE value="exceptions em TaskService" />
     <MESSAGE value="testes unitários: taskService" />
     <MESSAGE value="testes unitários: taskController" />
-    <option name="LAST_COMMIT_MESSAGE" value="testes unitários: taskController" />
+    <MESSAGE value="implementacao do postgres" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementacao do postgres" />
   </component>
 </project>
