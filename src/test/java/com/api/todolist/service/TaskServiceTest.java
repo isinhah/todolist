@@ -124,7 +124,7 @@ class TaskServiceTest {
 
     @Test
     @DisplayName("Should update a task when successful")
-    void updateTask() {
+    void updateTask_WhenSuccessful() {
         TaskPutRequestBody dto = mock(TaskPutRequestBody.class);
 
         when(dto.getId()).thenReturn(1L);
@@ -143,7 +143,7 @@ class TaskServiceTest {
 
     @Test
     @DisplayName("Should delete a task By ID or throw NotFoundException")
-    void deleteTask() {
+    void deleteTask_WhenSuccessful() {
         Long id = 1L;
         Task task = mock(Task.class);
 
